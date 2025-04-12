@@ -6,6 +6,9 @@
   <title>Evaluating Relative Localization</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -52,16 +55,38 @@
     h1, h2 {
       color: #003366;
       margin-bottom: 20px;
+      text-align: center;
     }
     p, a {
       font-size: 16px;
     }
-    img, video {
-      max-width: 100%;
-      height: auto;
+    img {
       display: block;
-      margin: 15px 0;
+      margin: 20px auto;
       border: 1px solid #ccc;
+      max-width: 90%;
+      height: auto;
+    }
+    video {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .team-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .team-list a {
+      color: #003366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .team-list a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
@@ -81,6 +106,7 @@
       <a href="#experiment">Experiment</a>
       <a href="#video">Video</a>
       <a href="#results">Results</a>
+      <a href="#team">Team</a>
       <a href="paper.pdf" target="_blank">📄 Paper</a>
     </nav>
   </header>
@@ -89,7 +115,7 @@
 
     <section id="abstract">
       <h1>Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
-      <p><strong>Authors:</strong> Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
+      <p style="text-align: center;"><strong>Authors:</strong> Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
       <p>This project evaluates the use of AprilTags and onboard cameras for relative localization between drones operating in GPS-denied environments. Experiments were conducted at multiple distances and benchmarked against OptiTrack motion capture data. We also tested a YOLOv8 neural network for drone detection.</p>
     </section>
 
@@ -117,6 +143,16 @@
       <h2>Results</h2>
       <img src="images/position_vs_time.png" alt="Pose vs Time">
       <img src="images/plot_3d_apriltag.png" alt="3D Plot of AprilTag Trajectory">
+    </section>
+
+    <section id="team">
+      <h2>Meet the Team</h2>
+      <div class="team-list">
+        <a href="https://mukhe027.github.io/scubalab/members/cosme.html" target="_blank">Cosme Penney</a>
+        <a href="https://mukhe027.github.io/scubalab/members/daniel-guido.html" target="_blank">Daniel Guido</a>
+        <a href="https://mukhe027.github.io/scubalab/members/sarah-johnson.html" target="_blank">Taiwo Hazeez</a>
+        <a href="https://mukhe027.github.io/scubalab/members/pratik-mukherjee.html" target="_blank">Pratik Mukherjee (PI)</a>
+      </div>
     </section>
 
   </div>
