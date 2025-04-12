@@ -2,53 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluating Relative Localization</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f8f8f8;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      padding-top: 60px;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h1, h2 {
       color: #003366;
+      margin-bottom: 20px;
+    }
+    p, a {
+      font-size: 16px;
     }
     img, video {
       max-width: 100%;
-      margin: 20px 0;
+      height: auto;
+      display: block;
+      margin: 15px 0;
       border: 1px solid #ccc;
     }
-    a {
-      color: #007acc;
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background: #003366;
+      color: white;
     }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="#abstract">Abstract</a>
+      <a href="#system">System</a>
+      <a href="#experiment">Experiment</a>
+      <a href="#video">Video</a>
+      <a href="#results">Results</a>
+      <a href="paper.pdf" target="_blank">📄 Paper</a>
+    </nav>
+  </header>
 
-  <h1>Evaluating Relative Localization in GPS-Denied Environments</h1>
-  <p><strong>Authors:</strong> Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
-  <p><a href="paper.pdf">📄 Download the Paper</a></p>
+  <div class="container">
+    <section id="abstract">
+      <h1>Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
+      <p><strong>Authors:</strong> Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
+      <p>This project evaluates the use of AprilTags and onboard cameras for relative localization between drones operating in GPS-denied environments. Experiments were conducted at multiple distances and benchmarked against OptiTrack motion capture data. We also tested a YOLOv8 neural network for drone detection.</p>
+    </section>
 
-  <h2>System Overview</h2>
-  <img src="images/Drone Schematic.jpg" alt="Drone Schematic">
+    <section id="system">
+      <h2>System Overview</h2>
+      <img src="images/Drone Schematic.jpg" alt="Drone Schematic">
+      <img src="images/DronePOV.png" alt="Drone POV">
+    </section>
 
-  <h2>Experimental Setup</h2>
-  <img src="images/ExperimentalSetup.jpg" alt="Setup">
+    <section id="experiment">
+      <h2>Experimental Setup</h2>
+      <img src="images/ExperimentalSetup.jpg" alt="Experimental Setup">
+      <img src="images/TerminalOutput.png" alt="Terminal Output">
+    </section>
 
-  <h2>Drone Point of View</h2>
-  <img src="images/DronePOV.png" alt="POV">
+    <section id="video">
+      <h2>AprilTag Detection Demo</h2>
+      <video controls>
+        <source src="video/AprilTagLiveFeed.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
-  <h2>Video Demo</h2>
-  <video controls>
-    <source src="video/AprilTagLiveFeed.webm" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
+    <section id="results">
+      <h2>Results</h2>
+      <img src="images/Postionvstime.png" alt="Pose vs Time">
+      <img src="images/3dPlot april tag.png" alt="3D Plot of AprilTag Trajectory">
+    </section>
+  </div>
 
-  <h2>Results</h2>
-  <img src="images/Postionvstime.png" alt="Pose Error">
-  <img src="images/3dPlot april tag.png" alt="3D Plot">
-
-  <h2>Pose Terminal Output</h2>
-  <img src="images/TerminalOutput.png" alt="Terminal Output">
-
+  <footer>
+    <p>&copy; 2024 Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
+    <p>Project hosted on <a href="https://github.com/OccamsRazor123/Relative-Localization-UAVs" style="color: lightblue;">GitHub</a></p>
+  </footer>
 </body>
 </html>
