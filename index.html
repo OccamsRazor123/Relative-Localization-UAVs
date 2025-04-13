@@ -15,11 +15,10 @@
       box-sizing: border-box;
     }
     body {
-      padding-top: 120px;
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       background: #f4f4f4;
-      padding-top: 60px;
+      padding-top: 120px;
     }
     header {
       background: #003366;
@@ -42,6 +41,37 @@
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    .drone-animation {
+      margin-top: 100px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+    }
+    .drone {
+      width: 80px;
+      animation: hover 2s ease-in-out infinite;
+      border: none;
+      background: transparent;
+    }
+    .drone-left {
+      animation-delay: 0s;
+    }
+    .drone-right {
+      animation-delay: 1s;
+    }
+    .fau-logo {
+      width: 320px;
+      height: auto;
+      border: none;
+      background: transparent;
+    }
+    @keyframes hover {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
     .container {
       max-width: 900px;
@@ -96,131 +126,13 @@
       background: #003366;
       color: white;
     }
-      .drone-animation {
-      margin-top: 100px;
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 100px;
-      margin-top: 30px;
-    }
-    .drone {
-      width: 80px;
-      animation: hover 2s ease-in-out infinite;
-      border: none;
-      background: transparent;
-    .drone-left {
-      animation-delay: 0s;
-    }
-    .drone-right {
-      animation-delay: 1s;
-    }
-    @keyframes hover {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-15px);
-      }
-    }
-    .drone-animation {
-      position: absolute;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-      top: 20px;
-    }
-    .drone {
-      width: 80px;
-      animation: hover 2s ease-in-out infinite;
-    }
-    .drone-left {
-      animation-delay: 0s;
-    }
-    .drone-right {
-      animation-delay: 1s;
-    }
-    .fau-logo {
-      width: 320px;
-      height: auto;
-      border: none;
-      background: transparent;
-    @keyframes hover {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-</style>
+  </style>
 </head>
 <body>
   <div class="drone-animation">
-  <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
-  <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
-  <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
-</div>
-
-  <header>
-    <nav>
-      <a href="#abstract">Abstract</a>
-      <a href="#system">System</a>
-      <a href="#experiment">Experiment</a>
-      <a href="#video">Video</a>
-      <a href="#results">Results</a>
-      <a href="#team">Team</a>
-      <a href="paper.pdf" target="_blank">📄 Paper</a>
-    </nav>
-  </header>
-
-  <div class="container">
-
-    <section id="abstract">
-      <h1>Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
-      <p style="text-align: center;"><strong>Authors:</strong> <a href="https://mukhe027.github.io/scubalab/members/sarah-johnson.html" target="_blank">Taiwo Hazeez</a>, <a href="https://mukhe027.github.io/scubalab/members/cosme.html" target="_blank">Cosme Penney</a>, <a href="https://mukhe027.github.io/scubalab/members/daniel-guido.html" target="_blank">Daniel Guido</a>, <a href="https://mukhe027.github.io/scubalab/members/pratik-mukherjee.html" target="_blank">Pratik Mukherjee</a></p>
-      <p>This project evaluates the use of AprilTags and onboard cameras for relative localization between drones operating in GPS-denied environments. Experiments were conducted at multiple distances and benchmarked against OptiTrack motion capture data. We also tested a YOLOv8 neural network for drone detection.</p>
-    </section>
-
-    <section id="system">
-      <p style="text-indent: 2em;">To enable accurate pose estimation between UAVs in GPS-denied environments, we rely on a combination of visual fiducials and inertial sensing. Our system uses AprilTags attached to one drone and onboard cameras on the other for relative localization. This allows us to benchmark how well the drone can detect and estimate position in real-time without external localization infrastructure.</p>
-      <h2>System Overview</h2>
-      <img src="images/drone_schematic.jpg" alt="Drone Schematic">
-      <img src="images/drone_pov.png" alt="Drone POV">
-    </section>
-
-    <section id="experiment">
-      <p style="text-indent: 2em;">We conducted experiments in a controlled indoor environment equipped with 12 OptiTrack motion capture cameras. This system provides high-accuracy ground truth pose data, which we use as a benchmark to evaluate the onboard relative localization performance. Each drone was tagged with reflective markers to allow simultaneous tracking via OptiTrack while also performing onboard AprilTag detection.</p>
-      <h2>Experimental Setup</h2>
-      <img src="images/experimental_setup.jpg" alt="Experimental Setup">
-      <img src="images/terminal_output.png" alt="Terminal Output">
-    </section>
-
-    
-
-    <section id="results">
-      <p style="text-indent: 2em;">Our experimental results demonstrate a clear relationship between inter-agent distance and localization accuracy. At shorter ranges (3 ft and 6 ft), the AprilTag-based detection was stable and showed only minor positional error when compared to OptiTrack. At the furthest distance of 12 ft, detection reliability and positional precision decreased due to resolution and field-of-view limitations.</p>
-      <h2>Results</h2>
-      <img src="images/position_vs_time.png" alt="Pose vs Time">
-      <img src="images/plot_3d_apriltag.png" alt="3D Plot of AprilTag Trajectory">
-    </section>
-
-    
-
-  <section id="video">
-      <h2>AprilTag Detection Demo</h2>
-      <p style="text-indent: 2em;">Below is a sample live feed from the onboard Starling2 drone showcasing successful AprilTag detection in a GPS-denied test environment. This demo validates the onboard algorithm's ability to estimate the relative pose of another drone without relying on GPS or external beacons.</p>
-      <video controls>
-        <source src="video/apriltag_demo.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    </section>
+    <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
+    <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
+    <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
   </div>
-
-  <footer>
-    <p>&copy; 2024 Taiwo Hazeez, Cosme Penney, Daniel Guido, Pratik Mukherjee</p>
-    <p>Hosted on <a href="https://github.com/OccamsRazor123/Relative-Localization-UAVs" style="color: lightblue;">GitHub</a></p>
-  </footer>
-
 </body>
 </html>
