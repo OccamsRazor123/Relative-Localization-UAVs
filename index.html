@@ -130,6 +130,37 @@
       background: #003366;
       color: white;
     }
+    #authors {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .author-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .author img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: none;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
+    .author p {
+      font-weight: bold;
+      font-size: 16px;
+      color: #4285F4;
+      line-height: 1.4;
+    }
+    .lab-name {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -138,5 +169,28 @@
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
     <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
   </div>
+
+  <section id="authors">
+    <h2>Authors</h2>
+    <div class="author-row">
+      <div class="author">
+        <img src="images/cosme.png" alt="Cosme Penney">
+        <p><a href="https://mukhe027.github.io/scubalab/members/cosme.html" target="_blank">Cosme<br>Penney</a></p>
+      </div>
+      <div class="author">
+        <img src="images/taiwo.png" alt="Taiwo Hazeez">
+        <p><a href="https://mukhe027.github.io/scubalab/members/sarah-johnson.html" target="_blank">Taiwo<br>Hazeez</a></p>
+      </div>
+      <div class="author">
+        <img src="images/dan.png" alt="Daniel Guido">
+        <p><a href="https://mukhe027.github.io/scubalab/members/daniel-guido.html" target="_blank">Daniel<br>Guido</a></p>
+      </div>
+      <div class="author">
+        <img src="images/pratik.png" alt="Pratik Mukherjee">
+        <p><a href="https://mukhe027.github.io/scubalab/members/pratik-mukherjee.html" target="_blank">Pratik<br>Mukherjee</a></p>
+      </div>
+    </div>
+    <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
+  </section>
 </body>
 </html>
