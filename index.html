@@ -6,14 +6,8 @@
   <title>Evaluating Relative Localization</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
       background: #f4f4f4;
@@ -41,9 +35,7 @@
       font-weight: bold;
       font-size: 16px;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     .drone-animation {
       margin-top: 20px;
       display: flex;
@@ -51,16 +43,10 @@
       align-items: center;
       gap: 80px;
     }
-    .drone {
-      width: 60px;
-      animation: hover 2s ease-in-out infinite;
-    }
+    .drone { width: 60px; animation: hover 2s ease-in-out infinite; }
     .drone-left { animation-delay: 0s; }
     .drone-right { animation-delay: 1s; }
-    .fau-logo {
-      width: 100px;
-      height: auto;
-    }
+    .fau-logo { width: 100px; height: auto; }
     @keyframes hover {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
@@ -85,10 +71,7 @@
       text-align: center;
       font-size: 28px;
     }
-    p, a {
-      font-size: 16px;
-      line-height: 1.6;
-    }
+    p, a { font-size: 16px; line-height: 1.6; }
     img, video {
       display: block;
       margin: 20px auto;
@@ -115,11 +98,13 @@
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
       margin-bottom: 10px;
     }
-    .author p {
+    .author p a {
       font-weight: bold;
       font-size: 16px;
       color: #4285F4;
+      text-decoration: none;
     }
+    .author p a:hover { text-decoration: underline; }
     .lab-name {
       margin-top: 20px;
       font-size: 18px;
@@ -135,8 +120,6 @@
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
     <nav>
       <a href="#authors">Authors</a>
@@ -147,72 +130,38 @@
     </nav>
   </header>
 
-  <!-- DRONE + OWL ANIMATION -->
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
     <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
   </div>
 
-  <!-- TITLE -->
   <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
 
-  <!-- AUTHORS -->
   <section id="authors" class="container">
     <h2>Authors</h2>
     <div class="author-row">
       <div class="author">
-        <img src="images/cosme.jpg" alt="Cosme Penney">
-        <p>Cosme Penney</p>
+        <img src="images/cosme.png" alt="Cosme Penney">
+        <p><a href="https://mukhe027.github.io/scubalab/members/cosme.html" target="_blank">Cosme Penney</a></p>
       </div>
       <div class="author">
-        <img src="images/labmate1.jpg" alt="Labmate One">
-        <p>Labmate One</p>
+        <img src="images/taiwo.png" alt="Taiwo Hazeez">
+        <p><a href="https://mukhe027.github.io/scubalab/members/sarah-johnson.html" target="_blank">Taiwo Hazeez</a></p>
       </div>
       <div class="author">
-        <img src="images/labmate2.jpg" alt="Labmate Two">
-        <p>Labmate Two</p>
+        <img src="images/dan.png" alt="Daniel Guido">
+        <p><a href="https://mukhe027.github.io/scubalab/members/daniel-guido.html" target="_blank">Daniel Guido</a></p>
+      </div>
+      <div class="author">
+        <img src="images/pratik.png" alt="Pratik Mukherjee">
+        <p><a href="https://mukhe027.github.io/scubalab/members/pratik-mukherjee.html" target="_blank">Pratik Mukherjee</a></p>
       </div>
     </div>
     <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <div class="container" id="abstract">
-    <section>
-      <p>Accurate relative localization is critical for enabling autonomous behaviors in multi-agent UAV systems, such as formation flight, cooperative mapping, and search-and-rescue coordination...</p>
-      <img src="images/drone_schematic.jpg" alt="Drone Schematic">
-
-      <p>The Starling2 platform, developed by ModalAI...</p>
-      <img src="images/experimental_setup.jpg" alt="Experimental Setup">
-
-      <p>We designed a series of experiments using two Starling2 UAVs in a 15 ft × 15 ft indoor flight arena...</p>
-      <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
-
-      <p>To evaluate spatial performance, we recorded pose data at three discrete distances...</p>
-      <img src="images/drone_pov.png" alt="Drone POV">
-
-      <p>The AprilTag-based relative localization method consistently produced usable pose estimates across all tested distances...</p>
-      <img src="images/position_vs_time.png" alt="Position vs Time">
-
-      <p>A YOLOv8s model was fine-tuned on a dataset of aerial drone imagery...</p>
-      <img src="images/terminal_output.png" alt="Terminal Output">
-    </section>
-
-    <!-- VIDEO DEMO -->
-    <section id="video">
-      <h2>Video Demo</h2>
-      <video controls>
-        <source src="video/apriltag_demo.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
-  </footer>
+  <!-- Sections like abstract, methodology, results, etc. will follow here -->
 
 </body>
 </html>
