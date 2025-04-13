@@ -135,6 +135,8 @@
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <nav>
       <a href="#authors">Authors</a>
@@ -145,20 +147,59 @@
     </nav>
   </header>
 
+  <!-- DRONE + OWL ANIMATION -->
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
     <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
   </div>
 
+  <!-- TITLE -->
   <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
 
+  <!-- AUTHORS -->
+  <section id="authors" class="container">
+    <h2>Authors</h2>
+    <div class="author-row">
+      <div class="author">
+        <img src="images/cosme.jpg" alt="Cosme Penney">
+        <p>Cosme Penney</p>
+      </div>
+      <div class="author">
+        <img src="images/labmate1.jpg" alt="Labmate One">
+        <p>Labmate One</p>
+      </div>
+      <div class="author">
+        <img src="images/labmate2.jpg" alt="Labmate Two">
+        <p>Labmate Two</p>
+      </div>
+    </div>
+    <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
   <div class="container" id="abstract">
     <section>
-      <!-- Your abstract + images and paragraphs already here -->
-      <!-- Unchanged content kept here -->
+      <p>Accurate relative localization is critical for enabling autonomous behaviors in multi-agent UAV systems, such as formation flight, cooperative mapping, and search-and-rescue coordination...</p>
+      <img src="images/drone_schematic.jpg" alt="Drone Schematic">
+
+      <p>The Starling2 platform, developed by ModalAI...</p>
+      <img src="images/experimental_setup.jpg" alt="Experimental Setup">
+
+      <p>We designed a series of experiments using two Starling2 UAVs in a 15 ft × 15 ft indoor flight arena...</p>
+      <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
+
+      <p>To evaluate spatial performance, we recorded pose data at three discrete distances...</p>
+      <img src="images/drone_pov.png" alt="Drone POV">
+
+      <p>The AprilTag-based relative localization method consistently produced usable pose estimates across all tested distances...</p>
+      <img src="images/position_vs_time.png" alt="Position vs Time">
+
+      <p>A YOLOv8s model was fine-tuned on a dataset of aerial drone imagery...</p>
+      <img src="images/terminal_output.png" alt="Terminal Output">
     </section>
 
+    <!-- VIDEO DEMO -->
     <section id="video">
       <h2>Video Demo</h2>
       <video controls>
@@ -166,29 +207,12 @@
         Your browser does not support the video tag.
       </video>
     </section>
-
-    <section id="authors">
-      <h2>Authors</h2>
-      <div class="author-row">
-        <div class="author">
-          <img src="images/cosme.jpg" alt="Cosme Penney">
-          <p>Cosme Penney</p>
-        </div>
-        <div class="author">
-          <img src="images/labmate1.jpg" alt="Labmate One">
-          <p>Labmate One</p>
-        </div>
-        <div class="author">
-          <img src="images/labmate2.jpg" alt="Labmate Two">
-          <p>Labmate Two</p>
-        </div>
-      </div>
-      <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
-    </section>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
   </footer>
+
 </body>
 </html>
