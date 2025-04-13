@@ -161,7 +161,30 @@
     <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
   </section>
 
-  <!-- Sections like abstract, methodology, results, etc. will follow here -->
+  <div class="container" id="abstract">
+    <p>This paper presents a comparative study evaluating the accuracy of relative localization in GPS-denied environments using Starling2 drones as test agents. We benchmark an open-source, vision-based localization method against ground-truth data from an OptiTrack motion capture system. Experiments are conducted across three fixed inter-agent distances (3 ft, 6 ft, and 12 ft) to evaluate spatial performance and drift.</p>
+    <img src="images/drone_schematic.jpg" alt="Drone Schematic">
+    <p>Accurate relative localization is critical for enabling autonomous behaviors in multi-agent UAV systems, such as formation flight, cooperative mapping, and search-and-rescue coordination. While GPS offers reliable global positioning outdoors, it becomes unreliable or unavailable in certain outdoor environments such as mountains, oceans, or even deep space.</p>
+    <img src="images/experimental_setup.jpg" alt="Experimental Setup">
+    <p>To evaluate spatial performance, we recorded pose data at three discrete distances: 3 ft, 6 ft, and 12 ft. At each distance, Drone A estimated the pose data of Drone B based on onboard visual detection of the AprilTag. The true relative transform was recorded simultaneously using OptiTrack.</p>
+    <img src="images/plot_3d_apriltag.png" alt="3D Plot of AprilTag">
+    <p>The AprilTag-based relative localization method consistently produced usable pose estimates across all tested distances. At 3 ft, the algorithm exhibited minimal drift, with a positional error of just 3.4 cm and orientation error of 2 degrees. At 6 ft, performance remained within acceptable margins. At 12 ft, a more noticeable degradation occurred due to reduced pixel resolution and motion blur.</p>
+    <img src="images/position_vs_time.png" alt="Position vs Time">
+    <p>A YOLOv8s model was fine-tuned on a dataset of aerial drone imagery. Initial inference using the Starling2 front camera showed robust detection at 3 ft and 6 ft, with decreasing confidence beyond 10 ft. Bounding box centers were used to estimate relative bearing. Future work will focus on incorporating depth cues to estimate full pose data.</p>
+    <img src="images/terminal_output.png" alt="Terminal Output">
+  </div>
+
+  <div class="container" id="video">
+    <h2>Video Demo</h2>
+    <video controls>
+      <source src="video/apriltag_demo.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
+  </footer>
 
 </body>
 </html>
