@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evaluating Relative Localization</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
@@ -16,10 +16,11 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
       background: #f4f4f4;
-      padding-top: 120px;
+      padding-top: 140px;
+      color: #333;
     }
+
     header {
       background: #003366;
       color: white;
@@ -28,6 +29,7 @@
       width: 100%;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     nav {
       display: flex;
@@ -38,24 +40,32 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
     nav a:hover {
       text-decoration: underline;
     }
+
+    .hero-title {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 36px;
+      color: #003366;
+      font-weight: bold;
+    }
+
     .drone-animation {
-      margin-top: 100px;
+      margin-top: 20px;
       position: relative;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 100px;
+      gap: 80px;
     }
     .drone {
-      width: 80px;
+      width: 60px;
       animation: hover 2s ease-in-out infinite;
-      border: none;
-      background: transparent;
     }
     .drone-left {
       animation-delay: 0s;
@@ -64,10 +74,8 @@
       animation-delay: 1s;
     }
     .fau-logo {
-      width: 80px;
+      width: 100px;
       height: auto;
-      border: none;
-      background: transparent;
     }
     @keyframes hover {
       0%, 100% {
@@ -77,35 +85,32 @@
         transform: translateY(-15px);
       }
     }
+
     .container {
       max-width: 900px;
-      margin: auto;
+      margin: 60px auto;
       padding: 20px;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+    h2 {
       color: #003366;
       margin-bottom: 20px;
       text-align: center;
+      font-size: 28px;
     }
     p, a {
       font-size: 16px;
+      line-height: 1.6;
     }
-    img {
+    img, video {
       display: block;
       margin: 20px auto;
       max-width: 90%;
       height: auto;
       border: none;
     }
-    video {
-      display: block;
-      margin: 20px auto;
-      max-width: 90%;
-      height: auto;
-      border: none;
-    }
+
     #authors {
       text-align: center;
       margin-top: 60px;
@@ -122,7 +127,6 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: none;
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
       margin-bottom: 10px;
     }
@@ -130,15 +134,15 @@
       font-weight: bold;
       font-size: 16px;
       color: #4285F4;
-      line-height: 1.4;
     }
+
     .lab-name {
       margin-top: 20px;
       font-size: 18px;
       color: #333;
-      text-align: center;
     }
-      footer {
+
+    footer {
       text-align: center;
       margin-top: 60px;
       padding: 20px;
@@ -148,6 +152,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <a href="#authors">Authors</a>
@@ -156,6 +161,8 @@
       <a href="#video">Video</a>
     </nav>
   </header>
+
+  <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments</h1>
 
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
@@ -210,8 +217,10 @@
       </video>
     </section>
   </div>
+
   <footer>
     <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
   </footer>
+
 </body>
 </html>
