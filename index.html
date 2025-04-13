@@ -20,6 +20,28 @@
       background: #f4f4f4;
       padding-top: 120px;
     }
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .drone-animation {
       margin-top: 100px;
       position: relative;
@@ -116,9 +138,25 @@
       color: #333;
       text-align: center;
     }
+      footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background: #003366;
+      color: white;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="#authors">Authors</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#figures">Figures</a>
+      <a href="#video">Video</a>
+    </nav>
+  </header>
+
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
@@ -149,22 +187,31 @@
   </section>
 
   <div class="container">
-    <h2>Abstract</h2>
-    <p>This paper presents a comparative study evaluating the accuracy of relative localization in GPS-denied environments using Starling2 drones as test agents. We benchmark an open-source, vision-based localization method against ground-truth data from an OptiTrack motion capture system. Experiments are conducted across three fixed inter-agent distances (3 ft, 6 ft, and 12 ft) to evaluate spatial performance and drift. Additionally, we present preliminary results using a YOLOv8 neural network for drone detection as an alternative onboard localization method.</p>
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>This paper presents a comparative study evaluating the accuracy of relative localization in GPS-denied environments using Starling2 drones as test agents. We benchmark an open-source, vision-based localization method against ground-truth data from an OptiTrack motion capture system. Experiments are conducted across three fixed inter-agent distances (3 ft, 6 ft, and 12 ft) to evaluate spatial performance and drift. Additionally, we present preliminary results using a YOLOv8 neural network for drone detection as an alternative onboard localization method.</p>
+    </section>
 
-    <h2>Figures</h2>
-    <img src="images/drone_schematic.jpg" alt="Drone Schematic">
-    <img src="images/experimental_setup.jpg" alt="Experimental Setup">
-    <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
-    <img src="images/drone_pov.png" alt="Drone POV">
-    <img src="images/position_vs_time.png" alt="Position vs Time">
-    <img src="images/terminal_output.png" alt="Terminal Output">
+    <section id="figures">
+      <h2>Figures</h2>
+      <img src="images/drone_schematic.jpg" alt="Drone Schematic">
+      <img src="images/experimental_setup.jpg" alt="Experimental Setup">
+      <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
+      <img src="images/drone_pov.png" alt="Drone POV">
+      <img src="images/position_vs_time.png" alt="Position vs Time">
+      <img src="images/terminal_output.png" alt="Terminal Output">
+    </section>
 
-    <h2>Video Demo</h2>
-    <video controls>
-      <source src="video/apriltag_demo.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
+    <section id="video">
+      <h2>Video Demo</h2>
+      <video controls>
+        <source src="video/apriltag_demo.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </section>
   </div>
+  <footer>
+    <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
+  </footer>
 </body>
 </html>
