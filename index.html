@@ -20,7 +20,6 @@
       padding-top: 140px;
       color: #333;
     }
-
     header {
       background: #003366;
       color: white;
@@ -45,19 +44,15 @@
     nav a:hover {
       text-decoration: underline;
     }
-
     .hero-title {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 30px;
       font-size: 36px;
       color: #003366;
       font-weight: bold;
     }
-
     .drone-animation {
       margin-top: 20px;
-      position: relative;
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -85,7 +80,6 @@
         transform: translateY(-15px);
       }
     }
-
     .container {
       max-width: 900px;
       margin: 60px auto;
@@ -110,7 +104,6 @@
       height: auto;
       border: none;
     }
-
     #authors {
       text-align: center;
       margin-top: 60px;
@@ -135,13 +128,11 @@
       font-size: 16px;
       color: #4285F4;
     }
-
     .lab-name {
       margin-top: 20px;
       font-size: 18px;
       color: #333;
     }
-
     footer {
       text-align: center;
       margin-top: 60px;
@@ -162,13 +153,13 @@
     </nav>
   </header>
 
-  <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments</h1>
-
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
     <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
   </div>
+
+  <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
 
   <section id="authors">
     <h2>Authors</h2>
@@ -201,12 +192,27 @@
 
     <section id="figures">
       <h2>Figures</h2>
+
       <img src="images/drone_schematic.jpg" alt="Drone Schematic">
+      <p style="text-align:center;">Fig. 2: Schematic of experimental setup showing Drone A estimating the pose of Drone B using onboard AprilTag detection. OptiTrack provides ground truth.</p>
+      <p>The Starling2 platform was evaluated in a 15×15 ft indoor test arena with 12 OptiTrack cameras. Drone A used its onboard camera to detect an AprilTag attached to Drone B for pose estimation, while OptiTrack provided ground-truth data.</p>
+
       <img src="images/experimental_setup.jpg" alt="Experimental Setup">
+      <p style="text-align:center;">Fig. 3: Photo of the indoor experimental environment with labeled drones and OptiTrack cameras.</p>
+      <p>Pose data was captured at distances of 3 ft, 6 ft, and 12 ft. The true relative transform T<sub>BA</sub> was calculated using the relative rotation matrix R<sub>BA</sub> and translation vector t<sub>BA</sub>.</p>
+
       <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
+      <p style="text-align:center;">Fig. 4: Onboard camera view showing successful AprilTag detection by Drone A.</p>
+      <p>AprilTag-based relative localization remained highly accurate at close distances, with increasing error observed at 12 ft due to tag size and motion blur. Nonetheless, detections remained reliable across all trials.</p>
+
       <img src="images/drone_pov.png" alt="Drone POV">
       <img src="images/position_vs_time.png" alt="Position vs Time">
+      <p style="text-align:center;">Fig. 5: Position and orientation error vs. time for different distances.</p>
+      <p>Position errors increased from 3.4 cm at 3 ft to 12.7 cm at 12 ft. Orientation error followed a similar trend. These results demonstrate the limits of visual pose estimation at greater distances.</p>
+
       <img src="images/terminal_output.png" alt="Terminal Output">
+      <p style="text-align:center;">Fig. 6: Terminal output of real-time relative pose estimate logged via VOXL.</p>
+      <p>Preliminary testing using YOLOv8 showed effective drone detection at short range, with bounding box center used to infer bearing. Future work will explore depth estimation for full pose recovery.</p>
     </section>
 
     <section id="video">
@@ -221,6 +227,5 @@
   <footer>
     <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
   </footer>
-
 </body>
 </html>
