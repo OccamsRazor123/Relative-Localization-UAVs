@@ -44,13 +44,6 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .hero-title {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 36px;
-      color: #003366;
-      font-weight: bold;
-    }
     .drone-animation {
       margin-top: 20px;
       display: flex;
@@ -79,6 +72,13 @@
       50% {
         transform: translateY(-15px);
       }
+    }
+    .hero-title {
+      text-align: center;
+      font-size: 32px;
+      color: #003366;
+      font-weight: bold;
+      margin-top: 30px;
     }
     .container {
       max-width: 900px;
@@ -143,7 +143,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <a href="#authors">Authors</a>
@@ -160,72 +159,5 @@
   </div>
 
   <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
-
-  <section id="authors">
-    <h2>Authors</h2>
-    <div class="author-row">
-      <div class="author">
-        <img src="images/cosme.png" alt="Cosme Penney">
-        <p><a href="https://mukhe027.github.io/scubalab/members/cosme.html" target="_blank">Cosme<br>Penney</a></p>
-      </div>
-      <div class="author">
-        <img src="images/taiwo.png" alt="Taiwo Hazeez">
-        <p><a href="https://mukhe027.github.io/scubalab/members/sarah-johnson.html" target="_blank">Taiwo<br>Hazeez</a></p>
-      </div>
-      <div class="author">
-        <img src="images/dan.png" alt="Daniel Guido">
-        <p><a href="https://mukhe027.github.io/scubalab/members/daniel-guido.html" target="_blank">Daniel<br>Guido</a></p>
-      </div>
-      <div class="author">
-        <img src="images/pratik.png" alt="Pratik Mukherjee">
-        <p><a href="https://mukhe027.github.io/scubalab/members/pratik-mukherjee.html" target="_blank">Pratik<br>Mukherjee</a></p>
-      </div>
-    </div>
-    <p class="lab-name">SCUBA Lab, Florida Atlantic University</p>
-  </section>
-
-  <div class="container">
-    <section id="abstract">
-      <h2>Abstract</h2>
-      <p>This paper presents a comparative study evaluating the accuracy of relative localization in GPS-denied environments using Starling2 drones as test agents. We benchmark an open-source, vision-based localization method against ground-truth data from an OptiTrack motion capture system. Experiments are conducted across three fixed inter-agent distances (3 ft, 6 ft, and 12 ft) to evaluate spatial performance and drift. Additionally, we present preliminary results using a YOLOv8 neural network for drone detection as an alternative onboard localization method.</p>
-    </section>
-
-    <section id="figures">
-      <h2>Figures</h2>
-
-      <img src="images/drone_schematic.jpg" alt="Drone Schematic">
-      <p style="text-align:center;">Fig. 2: Schematic of experimental setup showing Drone A estimating the pose of Drone B using onboard AprilTag detection. OptiTrack provides ground truth.</p>
-      <p>The Starling2 platform was evaluated in a 15×15 ft indoor test arena with 12 OptiTrack cameras. Drone A used its onboard camera to detect an AprilTag attached to Drone B for pose estimation, while OptiTrack provided ground-truth data.</p>
-
-      <img src="images/experimental_setup.jpg" alt="Experimental Setup">
-      <p style="text-align:center;">Fig. 3: Photo of the indoor experimental environment with labeled drones and OptiTrack cameras.</p>
-      <p>Pose data was captured at distances of 3 ft, 6 ft, and 12 ft. The true relative transform T<sub>BA</sub> was calculated using the relative rotation matrix R<sub>BA</sub> and translation vector t<sub>BA</sub>.</p>
-
-      <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
-      <p style="text-align:center;">Fig. 4: Onboard camera view showing successful AprilTag detection by Drone A.</p>
-      <p>AprilTag-based relative localization remained highly accurate at close distances, with increasing error observed at 12 ft due to tag size and motion blur. Nonetheless, detections remained reliable across all trials.</p>
-
-      <img src="images/drone_pov.png" alt="Drone POV">
-      <img src="images/position_vs_time.png" alt="Position vs Time">
-      <p style="text-align:center;">Fig. 5: Position and orientation error vs. time for different distances.</p>
-      <p>Position errors increased from 3.4 cm at 3 ft to 12.7 cm at 12 ft. Orientation error followed a similar trend. These results demonstrate the limits of visual pose estimation at greater distances.</p>
-
-      <img src="images/terminal_output.png" alt="Terminal Output">
-      <p style="text-align:center;">Fig. 6: Terminal output of real-time relative pose estimate logged via VOXL.</p>
-      <p>Preliminary testing using YOLOv8 showed effective drone detection at short range, with bounding box center used to infer bearing. Future work will explore depth estimation for full pose recovery.</p>
-    </section>
-
-    <section id="video">
-      <h2>Video Demo</h2>
-      <video controls>
-        <source src="video/apriltag_demo.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 SCUBA Lab, Florida Atlantic University</p>
-  </footer>
 </body>
 </html>
