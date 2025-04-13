@@ -95,9 +95,67 @@
       background: #003366;
       color: white;
     }
-  </style>
+      .drone-animation {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      top: 20px;
+    }
+    .drone {
+      width: 80px;
+      animation: hover 2s ease-in-out infinite;
+    }
+    .drone-left {
+      animation-delay: 0s;
+    }
+    .drone-right {
+      animation-delay: 1s;
+    }
+    @keyframes hover {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    .drone-animation {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      top: 20px;
+    }
+    .drone {
+      width: 80px;
+      animation: hover 2s ease-in-out infinite;
+    }
+    .drone-left {
+      animation-delay: 0s;
+    }
+    .drone-right {
+      animation-delay: 1s;
+    }
+    .fau-logo {
+      width: 100px;
+      height: auto;
+    }
+    @keyframes hover {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+</style>
 </head>
 <body>
+  <div class="drone-animation">
+  <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
+  <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
+  <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
+</div>
 
   <header>
     <nav>
