@@ -141,6 +141,7 @@
       color: white;
     }
   </style>
+<br><br>
 </head>
 <body>
   <header>
@@ -155,8 +156,11 @@
 
   <div class="drone-animation">
     <img src="images/drone_icon.png" class="drone drone-left" alt="Drone Left">
+<br><br>
     <img src="images/fau_owl.png" class="fau-logo" alt="FAU Owl Logo">
+<br><br>
     <img src="images/drone_icon.png" class="drone drone-right" alt="Drone Right">
+<br><br>
   </div>
 
   <h1 class="hero-title">Evaluating Relative Localization in GPS-Denied Environments Using Starling2 UAVs</h1>
@@ -165,16 +169,22 @@
     <section>
       <p>Accurate relative localization is critical for enabling autonomous behaviors in multi-agent UAV systems, such as formation flight, cooperative mapping, and search-and-rescue coordination. While GPS offers reliable global positioning outdoors, it becomes unreliable or unavailable in certain outdoor environments such as mountains, oceans, or even deep space. In such GPS-denied scenarios, relative localization must rely on onboard sensors such as cameras, IMUs, and visual markers.</p>
       <img src="images/drone_schematic.jpg" alt="Drone Schematic">
+<br><br>
       <p>The Starling2 platform, developed by ModalAI, is specifically designed for autonomous operations in these types of constrained environments. It features a VOXL2 computer with an integrated IMU, stereo camera, and support for vision-based algorithms. In this study, we assess the performance of a visual relative localization method based on AprilTags and onboard sensors. To validate and benchmark performance, we compare against ground-truth pose data from an OptiTrack motion capture system.</p>
       <img src="images/experimental_setup.jpg" alt="Experimental Setup">
+<br><br>
       <p>We designed a series of experiments using two Starling2 UAVs in a 15 ft × 15 ft indoor flight arena instrumented with 12 OptiTrack cameras. Each drone was outfitted with retroreflective markers for external pose tracking. The relative localization algorithm used onboard cameras and AprilTags affixed to one of the drones (Drone B), while the other drone (Drone A) performed pose estimation.</p>
       <img src="images/plot_3d_apriltag.png" alt="3D Plot AprilTag">
+<br><br>
       <p>To evaluate spatial performance, we recorded pose data at three discrete distances: 3 ft, 6 ft, and 12 ft. At each distance, Drone A estimated the pose data of Drone B based on onboard visual detection of the AprilTag. The true relative transform T<sub>BA</sub> was recorded simultaneously using OptiTrack.</p>
       <img src="images/drone_pov.png" alt="Drone POV">
+<br><br>
       <p>The AprilTag-based relative localization method consistently produced usable pose estimates across all tested distances. At 3 ft, the algorithm exhibited minimal drift, with a positional error of just 3.4 cm and orientation error of 2 degrees. At 6 ft, performance remained within acceptable margins, with modest increases in error. At 12 ft, a more noticeable degradation occurred due to reduced pixel resolution and motion blur.</p>
       <img src="images/position_vs_time.png" alt="Position vs Time">
+<br><br>
       <p>A YOLOv8s model was fine-tuned on a dataset of aerial drone imagery. Initial inference using the Starling2 front camera showed robust detection at 3 ft and 6 ft, with decreasing confidence beyond 10 ft. Bounding box centers were used to estimate relative bearing. Future work will focus on incorporating depth cues to estimate full pose data.</p>
       <img src="images/terminal_output.png" alt="Terminal Output">
+<br><br>
     </section>
   </div>
 </body>
